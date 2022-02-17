@@ -23,9 +23,9 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          rm -rf node_modules
           npm install
-          npm run build --if-present
-          npm run test --if-present
+          npm run --prefix react_client start
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
