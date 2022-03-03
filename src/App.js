@@ -75,7 +75,7 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    fetch("http://todoadam.azurewebsites.net/todos/")
+    fetch("https://todoadam.azurewebsites.net/todos/")
       .then(response => response.json())
       .then(data => this.setState({ todos: data }))
       .catch(error => console.log(error));
