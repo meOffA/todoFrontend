@@ -74,7 +74,7 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    fetch("/todos/")
+    fetch("/todos")
       .then(response => response.json())
       .then(data => this.setState({ todos: data }))
       .catch(error => console.log(error));
