@@ -51,6 +51,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'adamtodofront'
+          path: ./build
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6DCB73430A0540509B84A44BE8682928 }}
           package: .
