@@ -3,6 +3,7 @@ import "./App.css";
 import Todos from "./components/Todos";
 import ViewToggle from "./components/ViewToggle";
 
+
 export default class App extends Component {
   state = {
     todos: [],
@@ -79,6 +80,7 @@ export default class App extends Component {
       .then(data => this.setState({ todos: data }))
       .catch(error => console.log(error));
   }
+  
 
   render() {
     return (
