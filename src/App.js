@@ -20,7 +20,7 @@ export default class App extends Component {
         "Content-Type": "application/json"
       }
     };
-    fetch("/todos/" + todo.id, putData)
+    fetch("https://todoadam.azurewebsites.net/todos/" + todo.id, putData)
       .then(response => response.json())
       .then(({ todo }) => {
         todos[index] = { id: todo.id, task: todo.task, done: todo.done };
@@ -38,7 +38,7 @@ export default class App extends Component {
         "Content-Type": "application/json"
       }
     };
-    fetch("/todos/", postData)
+    fetch("https://todoadam.azurewebsites.net/todos/", postData)
       .then(response => response.json())
       .then(({ todo }) => {
         todos.push({ id: todo.id, task: todo.task, done: todo.done });
@@ -54,7 +54,7 @@ export default class App extends Component {
         "Content-Type": "application/json"
       }
     };
-    fetch("/todos/" + todo.id, deleteData)
+    fetch("https://todoadam.azurewebsites.net/todos/" + todo.id, deleteData)
       .then(response => response.json())
       .then(data => {
         if (data.code === 200) {
