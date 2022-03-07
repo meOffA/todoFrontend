@@ -104,6 +104,7 @@ export default class App extends Component {
                 handleRemoveTodo={this.handleRemoveTodo}
                 handleAddTodo={this.handleAddTodo}
               />
+              <img src="https://adamsa.blob.core.windows.net/pngs/azure-storage-blob.png" width="111" height="111"></img>
             </div>
           </div>
         </div>
